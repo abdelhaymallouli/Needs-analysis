@@ -1,56 +1,55 @@
-# Fonctionnalités principales et cas d’utilisation
+# ⚙️ Main Features and Use Cases  
 
+## 1. Brainstorm – All Possible Features  
 
-## 1. Brainstorm ALL features
+### Possible Features  
 
-### Possible features
+- View published articles  
+- Search for local initiatives (art, culture, digital projects)  
+- Publish an article or story  
+- Add photos to a post  
+- Comment or like an article  
+- Register and log in  
+- View contributor profiles  
+- Access through the mobile app (Android)  
+- Filter by category (art, innovation, events, etc.)  
 
-- See workout list
-- Start a workout
-- See timer
-- Track calories
-- Save favorite workouts
-- Download for offline
-- Create custom workout
-- Login
+---
 
-
-## 2. Prioritized Features (MoSCoW)
+## 2. Prioritized Features (MoSCoW Method)
 
 | Feature | Description | Priority |
 |----------|--------------|-----------|
-| Display 3 workout routines (15 min each) | Home screen with 3 ready-to-start options | **Must** |
-| Start a workout | “Start” button → timer + calories tracking | **Must** |
-| Live calorie tracking | Real-time display of calories burned | **Must** |
-| Offline mode | Download once, use anywhere | **Should** |
-| Save a workout | Mark as favorite | **Could** |
-| User login | Login / profile | **Won’t** (MVP) |
+| Display latest articles | Homepage showing recent cultural and digital initiatives in Tangier | **Must** |
+| Publish an article | Allow registered users to share local projects or initiatives | **Must** |
+| Register / Login | User authentication and profile creation | **Must** |
+| Comment / Like an article | Let users interact with the community | **Should** |
+| Search / Filter by category | Easily find content by topic (art, culture, tech) | **Should** |
+| Android mobile app | Mobile version connected through Laravel API | **Could** |
+
 
 ---
 
 ## 3. Use Cases (UC)
 
-| ID | Actor | As **Ahmed**, I want to… so that I can… | Priority |
-|----|--------|------------------------------------------|-----------|
-| UC1 | Busy employee | see 3 ready-to-use 15-minute workouts **so I can choose in less than 5 seconds** | Must |
-| UC2 | Busy employee | start a workout with one click **so I don’t waste time** | Must |
-| UC3 | Busy employee | see calories burned in real time **so I can track my progress** | Must |
-| UC4 | Busy employee | use the app without Wi-Fi **so I can work out in the basement** | Should |
-| UC5 | Busy employee | save a workout **so I can repeat it tomorrow** | Could |
+| ID | Actor | As a… | I want to… | So that I can… | Priority |
+|----|--------|--------|-------------|----------------|-----------|
+| UC1 | Visitor | explore recent local initiatives | discover Tangier’s creative and cultural energy | **Must** |
+| UC2 | Contributor | publish an article with photos | share a local project or event | **Must** |
+| UC3 | Registered user | comment and like an article | interact with the local community | **Should** |
+| UC4 | User | search by category | quickly find specific topics | **Should** |
 
 ---
 
 ## 4. Use Case Diagram (Text Version)
 ```
-          +-------------------+
-          |     Fitness App   |
-          +-------------------+
-             /       |        \
-            /        |         \
-   +---------------+ +---------------+ +---------------+
-   | Start Workout | | Track Calories| | Offline Mode  |
-   +---------------+ +---------------+ +---------------+
-          |                  |                  |
-        [Ahmed]            [Ahmed]            [Ahmed]
-
-```
+         +-----------------------------------+
+         |      Tangier Inspire Blog         |
+         +-----------------------------------+
+             /            |            \
+            /             |             \
+ +----------------+ +----------------+ +----------------+
+ |  View Articles | | Publish Article| | Comment / Like |
+ +----------------+ +----------------+ +----------------+
+         |                  |                  |
+      [Visitor]         [Contributor]       [User]
